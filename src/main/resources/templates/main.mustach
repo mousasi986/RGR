@@ -1,0 +1,22 @@
+<html>
+<body>
+<div>
+    <form method="post">
+        <input type="text" name="txt" placeholder="Введите сообщение"/>
+        <input type="text" name="tag" placeholder="ТЭГ"/>
+        <button type="submit">Добавить</button>
+</form>
+</div>
+<div>{{Список контактов}}</div>
+<from method="post" action="filter">
+    <input type="text" name="filter">
+    <button type="submit">Найти</button>
+{{#contacts}}
+    <div>
+        <b>{{id}}</b>
+        <span>{{txt}}</span>
+        <i>{{tag}}</i>
+   </div>
+{{/contacts}}
+</body>
+</html>
